@@ -9,8 +9,6 @@ rules:
     kind: allowed
     ranges:
       - 10.0.0.0/8
-    ports:
-      - 80-81 
 `
 
 	conf, err := NewConfig([]byte(content))
