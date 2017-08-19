@@ -94,7 +94,7 @@ func NewConfig(b []byte) (conf Config, err error) {
 }
 
 // Allowed if Config has no sets, the default behavior is deny all
-var Allowed = func(conf Config, ip net.IP) bool {
+func Allowed(conf Config, ip net.IP) bool {
 	for _, rule := range conf.Rules {
 		switch rule.Kind {
 		case allowed:
